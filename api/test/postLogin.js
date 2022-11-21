@@ -17,4 +17,22 @@ describe(`POST ${endpoint}`, function () {
     expect(response.body.data.Name).to.eql(USER_DATA.name);
     expect(response.body.data.Email).to.eql(USER_DATA.email);
   });
+  it("login with invalid username", async function () {
+    const response = await request.post(endpoint).send({
+      email: "halo",
+      password: USER_DATA.password,
+    });
+
+    expect(response.status).to.eql(200);
+    expect(response.body.code).to.eql(1);
+  });
+  it("login with invalid password", async function () {
+    const response = await request.post(endpoint).send({
+      email: USER_DATA.email,
+      password: "password",
+    });
+
+    expect(response.status).to.eql(200);
+    expect(response.body.code).to.eql(1);
+  });
 });
