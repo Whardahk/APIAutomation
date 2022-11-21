@@ -1,0 +1,20 @@
+{
+  "name": "apiautomation",
+  "version": "1.0.0",
+  "description": "api automation using supertest and mochachai",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "keywords": [
+    "api",
+    "automation"
+  ],
+  "author": "whardah",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0",
+    "supertest": "^6.3.1"
+  }
+}
