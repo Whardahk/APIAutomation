@@ -19,6 +19,7 @@ describe(`POST ${endpoint}`, function () {
 
     const token = response.body.data.Token;
     console.log(token);
+    console.log(response.body.data.Id);
   });
   it("login with invalid username", async function () {
     const response = await request.post(endpoint).send({
