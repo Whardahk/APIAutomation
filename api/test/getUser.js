@@ -7,7 +7,7 @@ const endpoint = "/api/users";
 const page = 10;
 
 describe(`GET ${endpoint}`, function () {
-  it("returns all users", async function () {
+  it("get user", async function () {
     const response = await request
       .get(`${endpoint}?page=${page}`)
       .set({ Authorization: `Bearer ${token}` });
@@ -16,5 +16,12 @@ describe(`GET ${endpoint}`, function () {
     expect(response.body.page).to.eql(page);
     console.log(response.status);
     console.log(response.body);
+  });
+  it("returns all users with invalid auth token", async function () {
+    const response = await request
+      .get(`${endpoint}?page=${page}`)
+      .set({ Authorization: `${token}` });
+
+    expect(response.status).to.eql(401);
   });
 });
