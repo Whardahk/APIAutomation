@@ -6,7 +6,7 @@ const { USER_DATA } = require("../data/userData");
 const endpoint = "/api/authaccount/login";
 
 describe(`POST ${endpoint}`, function () {
-  it("Login with valid username & password", async function () {
+  it("Login with valid email & password", async function () {
     const response = await request.post(endpoint).send({
       email: USER_DATA.email,
       password: USER_DATA.password,
