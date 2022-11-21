@@ -2,7 +2,7 @@ const { baseUrl } = require("../data/baseUrl");
 const request = require("supertest")(baseUrl);
 const expect = require("chai").expect;
 
-const token = "3c42a950-d6e1-4991-9f72-7c783e87d6ab";
+const token = "2fa829a4-0fa7-43ae-9411-b4f3d129aa2c";
 const endpoint = "/api/users";
 const page = 10;
 
@@ -26,7 +26,7 @@ describe(`GET ${endpoint}`, function () {
 });
 
 //GET USER BY ID
-id = 189784;
+id = 189793;
 describe(`GET ${endpoint}`, function () {
   it("get user by id", async function () {
     const response = await request

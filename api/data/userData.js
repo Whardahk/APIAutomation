@@ -10,4 +10,10 @@ module.exports = {
     email: "user1@whardah.com",
     location: "Semarang, Indonesia",
   },
+
+  cangedUser: {
+    name: "user Whardah changed",
+    email: "userx@whardah.com",
+    location: "Indonesia",
+  },
 };
