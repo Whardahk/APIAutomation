@@ -28,4 +28,14 @@ describe(`POST ${endpoint}`, function () {
     // console.log(token);
     // module.exports = { token };
   });
+  it("register with same email user auth", async function () {
+    const response = await request.post(endpoint).send({
+      name: USER_DATA.name,
+      email: USER_DATA.email,
+      password: USER_DATA.password,
+    });
+
+    expect(response.status).to.eql(200);
+    expect(response.body.code).to.eql(1);
+  });
 });
