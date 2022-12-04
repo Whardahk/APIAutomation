@@ -16,4 +16,8 @@ module.exports = {
     email: "userx@whardah.com",
     location: "Indonesia",
   },
+
+  bearer: {
+    token: "6e21df42-7f31-45d4-b608-42e264dda472",
+  },
 };

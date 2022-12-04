@@ -1,9 +1,9 @@
 const { baseUrl } = require("../data/baseUrl");
 const request = require("supertest")(baseUrl);
 const expect = require("chai").expect;
-const { User } = require("../data/userData");
+const { User, bearer } = require("../data/userData");
 
-const token = "2fa829a4-0fa7-43ae-9411-b4f3d129aa2c";
+const token = bearer.token;
 const endpoint = "/api/users";
 
 describe(`POST ${endpoint}`, function () {

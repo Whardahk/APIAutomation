@@ -1,8 +1,9 @@
 const { baseUrl } = require("../data/baseUrl");
 const request = require("supertest")(baseUrl);
 const expect = require("chai").expect;
+const { bearer } = require("../data/userData");
 
-const token = "6207e156-745e-49c7-b547-2e6af629fee2";
+const token = bearer.token;
 const endpoint = "/api/users";
 id = 189793;
 
